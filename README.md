@@ -1,6 +1,6 @@
 Example Voting App
 =========
-#testing
+#testin
 Getting started
 ---------------
 
