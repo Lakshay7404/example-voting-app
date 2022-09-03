@@ -1,27 +1,28 @@
 pipeline {
-agent any
-tools{
-maven 'Maven 3.8.6'
+	agent any
+	tools{
+		maven 'Maven 3.8.6'
+		}
+	stages{
+		stage('build'){
+			steps{
+					echo "Compiling worker app.."
 }
-stages{
-stage("build"){
-steps{
-echo 'Compiling worker app..'
-}
-}
-} stage("test"){
-steps{
-echo 'Running Unit Tests on worker app..'
-}
-}
-stage("package"){
-steps{
-echo 'Packaging worker app'
+} 
+		stage('test'){
+			steps{
+				echo "Running Unit Tests on worker app.."
 }
 }
-post{
-always{
-echo 'Building multibranch pipeline for worker is completed..'
+		stage('package'){
+			steps{
+				echo "Packaging worker app"
+}
+}
+	post{
+		always{
+			echo "Building multibranch pipeline for worker is completed.."
+}
 }
 }
 }
