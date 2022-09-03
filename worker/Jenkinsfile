@@ -14,11 +14,9 @@ steps{
 echo 'Running Unit Tests on worker app..'
 }
 }
-} stage("package"){
+stage("package"){
 steps{
 echo 'Packaging worker app'
-}
-}
 }
 }
 post{
