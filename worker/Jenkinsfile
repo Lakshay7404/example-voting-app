@@ -4,7 +4,7 @@ tools{
 maven 'Maven 3.8.6'
 }
 stages{
-stage("build"){
+stage('build'){
 steps{
 echo 'Compiling worker app..'
 dir('worker'){
@@ -18,7 +18,7 @@ dir('worker'){
 sh 'mvn clean test'
 }
 }
-} stage("package"){
+} stage('package'){
 steps{
 echo 'Packaging worker app'
 dir('worker'){
